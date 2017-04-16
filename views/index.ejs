@@ -1,0 +1,24 @@
+<%- include header %>
+<div class="page">
+    <div class="page__bd">
+	    <div class="weui-cells__title">My Notes List</div>
+ 	    <div class="weui-panel">
+		     <div class="weui-panel__bd">
+		       <% if(notes){ %>
+	    		   <% notes.forEach(function(note){ %>
+			         <div class="weui-media-box weui-media-box_text">
+  	    			   <a href="/detail/<%=note._id %>">
+  				       <h4 class="weui-media-box__title"><%=note.title %></h4>
+  				       <p class="weui-media-box__desc"><%=note.tag %></p>
+  				       <ul class="weui-media-box__info">
+  		    			   <li class="weui-media-box__info__meta"><%=note.createTime %></li>
+  				       </ul>
+  	    			   </a>
+	             </div>
+	    		   <% }); %>
+		       <% } %>
+		     </div>
+	     </div>
+    </div>
+</div>
+<%- include footer %>
