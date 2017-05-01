@@ -6,7 +6,7 @@
 	    </div>-->
 	    <div class="page__bd">
 		<article class="weui-article">
-		    <h1><%=art.title %></h1>
+		    <h1><%=art.title %></h1><!--将art。title转移为html 并打印在页面显示中-->
 		    <section>
 			<span class="weui-cells__title"><%=art.tag %></span>
 			<span class="weui-cells__title">|</span>
@@ -19,4 +19,22 @@
 	    </div>
 	</div>
 
+   <!--<div class="text-center page-title"><%= title %></div>
+    <div class="container">
+	<div class="row">
+	    <div class="col-xs-8 col-xs-offset-2">
+		<div class="article-box">
+		    <h1 class="text-center"><%= art.title %></h1>
+		    <p class="text-center">
+			<span class="lable lable-info"><%= art.tag %></span>|
+			<span class="create-time">
+			    <span class="text-bold">Time:</span>
+			    <%= moment(art.createTime).locale('zh-cn').format('LL HH:mm:ss') %>
+			</span>
+		    </p>
+		    <p><%= art.content %></p>
+		</div>
+	    </div>
+	</div>
+    </div>-->
 <%- include footer %>
